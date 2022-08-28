@@ -1,0 +1,4 @@
+package Arrays_and_Strings;
+
+public class The_kth_Lexicographical_String_Of_All_Happy_Strings_Of_Length_n {
+}

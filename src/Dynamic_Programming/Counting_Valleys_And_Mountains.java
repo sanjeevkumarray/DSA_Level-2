@@ -1,0 +1,24 @@
+package Dynamic_Programming;
+import java.io.*;
+import java.util.*;
+public class Counting_Valleys_And_Mountains {
+    public static void main(String[] args) throws Exception {
+    Scanner sc= new Scanner(System.in);
+    int n= sc.nextInt();
+    int dp[]= new int[n+1];
+    dp[0]=1;
+    dp[1]=1;
+    for(int i=2; i<dp.length; i++){
+        int inside =i-1;
+        int outside=0;
+        while(inside>=0){
+            dp[i]+=dp[outside]*dp[inside];
+            inside--;
+            outside++;
+        }
+    }
+
+System.out.println(dp[n]);
+}
+    }
+
